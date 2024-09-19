@@ -46,7 +46,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-// Layer 0
+// Default
         default_layer {
             display-name = "default";
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@
 // |  TAB   |   q    |   w    |   e    |   r    |   t    | VOL_UP>) ( PG_UP> |   y    |   u    |   i    |   o    |   p    |  DEL   |
 // |  ESC   |   a    |   s    |   d    |   f    |   g    | VOL_DN<) ( PG_DN< |   h    |   j    |   k    |   l    |  ;  :  |  '  "  |
 // | SHIFT  |   z    |   x    |   c    |   v    |   b    |  MUTE  | | PSCRN  |   n    |   m    |  ,  <  |  .  >  |  /  ?  | SHIFT  |
-//                   |  ALT   |  GUI   |  CTRL  | SPACE  | LOWER  | | ENTER  | SPACE  |  RAISE |  GUI   |  RALT  |
+//                   |  ALT   |  LGUI  |  CTRL  | SPACE  | LOWER  | | ENTER  | SPACE  |  RAISE |  RGUI  |  RALT  |
 //
 
             bindings = <
@@ -69,7 +69,7 @@
         };
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Layer 1
+// Lower
         lower_layer {
             display-name = "lower";
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -77,31 +77,31 @@
 // |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   | VOL_UP>) ( PG_UP> |   F7   |   F8   |   F9   |  F10   |  F11   |  F12   |
 // |        |  [  {  |  ]  }  |  -  _  |  =  +  |  \  |  | VOL_DN<) ( PG_DN< |  LEFT  | DOWN   |   UP   | RIGHT  | C_PGUP |        |
 // |        |   {    |   }    |   _    |   +    |   |    |        | |        |  HOME  | PG_DN  | PG_UP  |  END   | C_PGDN |  CAPS  |
-//                   |        |        |        |        |        | |        |        |        |        |        |
+//                   |        |        |        |        |        | |        |        |        | K_CMENU|        |
             bindings = <
-&kp TILDE &kp EXCL  &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR      &trans
-&kp F1    &kp F2    &kp F3    &kp F4     &kp F5    &kp F6                    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11       &kp F12
-&trans    &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL &kp BSLH                  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp LC(PG_UP) &trans
-&trans    &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS  &kp PIPE   &trans &trans  &kp HOME  &kp PG_DN &kp PG_UP &kp END   &kp LC(PG_DN) &kp CLCK
-                    &trans    &trans     &trans    &trans     &trans &trans  &trans    &trans    &trans    &trans
+&kp TILDE &kp EXCL  &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS  &kp ASTRK   &kp LPAR  &kp RPAR      &trans
+&kp F1    &kp F2    &kp F3    &kp F4     &kp F5    &kp F6                    &kp F7    &kp F8    &kp F9      &kp F10   &kp F11       &kp F12
+&trans    &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL &kp BSLH                  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT &kp LC(PG_UP) &trans
+&trans    &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS  &kp PIPE   &trans &trans  &kp HOME  &kp PG_DN &kp PG_UP   &kp END   &kp LC(PG_DN) &kp CLCK
+                    &trans    &trans     &trans    &trans     &trans &trans  &trans    &trans    &kp K_CMENU &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Layer 2
+// Raise
         raise_layer {
             display-name = "raise";
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | BTCLR  |  BT1   |  BT2   |  BT3   |  BT4   |  BT5   |                   |        |        |        |        |        |        |
-// | OUT_TOG|        |        |        |        |        | VOL_UP>) ( PG_UP> |        |        |        |        |        |S_A_F12 |
+// |        |        |        |        |        |        |                   |        |        |        |        |        |        |
+// |        |        |        |        |        |        | VOL_UP>) ( PG_UP> |        |        |        |        |        |S_A_F12 |
 // |        |        |        |        |        |        | VOL_DN<) ( PG_DN< |        |        |        |        |        |        |
 // |        |        |        |  "+y   |  "+p   |        |        | |        |        |        |        |        |        |        |
 //                   |        |        |        |        |        | |        |        |        |        |        |
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &trans    &trans    &trans   &trans    &trans  &trans
-&out OUT_TOG &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans   &trans    &trans  &kp LS(LA(F12))
+&trans       &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans   &trans    &trans  &trans
+&trans       &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans   &trans    &trans  &kp LS(LA(F12))
 &trans       &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans   &trans    &trans  &trans
 &trans       &trans       &trans       &plus_yank   &plus_paste  &trans        &trans  &trans  &trans    &trans    &trans   &trans    &trans  &trans
                           &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
@@ -111,19 +111,19 @@
         };
 // ---------------------------------------------------------------------------------------------------------------------------------
 
-// Layer 3
+// Adjust
         adjust_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |   BT1  |   BT2  |   BT3  |   BT4  |   BT5  |                   |        |        |        |        |        |        |
-// | EXTPWR | RGB_HUD| RGB_HUI| RGB_SAD| RGB_SAI| RGB_EFF|                   |        |        |        |        |        |        |
-// |        | RGB_BRD| RGB_BRI|        |        |        |                   |        |        |        |        |        |        |
+// | OUT_TOG| RGB_HUD| RGB_HUI| RGB_SAD| RGB_SAI| RGB_EFF|                   |        |        |        |        |        |        |
+// | EXTPWR | RGB_BRD| RGB_BRI|        |        |        |                   |        |        |        |        |        |        |
 // |        |        |        |        |        |        | RGB_TOG| |        |        |        |        |        |        |        |
 //                   |        |        |        |        |        | |        |        |        |        |        |
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
-&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
-&none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
+&out OUT_TOG      &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
+&ext_power EP_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
 &none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
                                   &none           &none           &none           &none            &none           &none  &none &none &none &none
             >;
