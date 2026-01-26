@@ -78,13 +78,13 @@
 // |        |        |        |   "+y  |   "+p  |        |        | |        |        |        |        |        | C_PGDN |  CAPS  |
 //                   |        |        |        |        |        | |        |        |        | K_CMENU|        |
 
-            bindings = 
+            bindings = <
 &trans    &trans    &trans    &trans     &trans    &trans                         &trans    &kp N7    &kp N8      &kp N9    &kp N0        &trans
 &trans    &kp LBRC  &kp RBRC  &kp UNDER  &kp PLUS  &kp PIPE                       &trans    &kp N4    &kp N5      &kp N6    &trans        &kp LS(LA(F12))
 &trans    &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL &kp BSLH                       &trans    &kp N1    &kp N2      &kp N3    &kp LC(PG_UP) &trans
 &trans    &trans    &trans    &plus_yank &plus_put &trans   &trans      &trans    &trans    &trans    &trans      &trans    &kp LC(PG_DN) &kp CLCK
                     &trans    &trans     &trans    &trans   &trans      &trans    &trans    &trans    &kp K_CMENU &trans
-            ;
+            >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(PG_DN) LC(PG_UP)>;
         };
@@ -114,6 +114,7 @@
 
 // Adjust
         adjust_layer {
+            display-name = "adjust";
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |   BT1  |   BT2  |   BT3  |   BT4  |   BT5  |                   |        |        |        |        |        |        |
 // | OUT_TOG| RGB_HUD| RGB_HUI| RGB_SAD| RGB_SAI| RGB_EFF|                   |        |        |        |        |        |        |
@@ -121,7 +122,6 @@
 // |        |        |        |        |        |        | RGB_TOG| |        |        |        |        |        |        |        |
 //                   |        |        |        |        |        | |        |        |        |        |        |
 
-            display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
 &out OUT_TOG      &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
