@@ -1,5 +1,9 @@
 # Sofle v2 Wireless Firmware
 
+## CLI
+
+https://zmk.dev/docs/zmk-cli
+
 ## Flash firmware
 
 To flash the firmware, first put your board into bootloader mode by double clicking the
