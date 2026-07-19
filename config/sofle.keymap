@@ -41,6 +41,15 @@
             display-name = "Mod-Tap";
         };
 
+        mtt: mod_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap-Preferred";
+        };
+
         // Example: &mo_tog 2 1     // &mo 2 on hold, &tog 1 on tap
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
@@ -76,16 +85,16 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  `  ~  |  1  !  |  2  @  |  3  #  |  4  $  |  5  %  |                   |  6  ^  |  7  &  |  8  *  |  9  (  |  0  )  |  BSPC  |
 // |  DEL   |   q    |   w    |   e    |   r    |   t    | C_PGDN>   VOL_UP> |   y    |   u    |   i    |   o    |   p    |  TAB   |
-// |  ESC   |   a    |   s    |   d    |   f    |   g    | C_PGUP<   VOL_DN< |   h    |   j    |   k    |   l    |  ;  :  |  '  "  |
+// |  ESC   |   a    | Alt|s  |   d    |   f    |   g    | C_PGUP<   VOL_DN< |   h    |   j    |   k    | Alt|l  |  ;  :  |  '  "  |
 // | SHIFT  |   z    |   x    |   c    |   v    |   b    | PSCRN  | | MUTE   |   n    |   m    |  ,  <  |  .  >  |  /  ?  | SHIFT  |
 //                   |  ALT   |  LGUI  | LCTRL  | SPACE  | LOWER  | | ENTER% | SPACE  | !RAISE |  RGUI  |        |
 
             bindings = <
-&kp GRAVE      &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                                         &kp N6         &kp N7    &kp N8    &kp N9      &kp N0   &kp BSPC
-&kp DEL        &kp Q   &kp W    &kp E    &kp R     &kp T                                          &kp Y          &kp U     &kp I     &kp O       &kp P    &kp TAB
-&kp ESC        &kp A   &kp S    &kp D    &kp F     &kp G                                          &kp H          &kp J     &kp K     &kp L       &kp SEMI &kp SQT
-&mt LSHFT CLCK &kp Z   &kp X    &kp C    &kp V     &kp B     &kp PSCRN        &kp C_MUTE          &kp N          &kp M     &kp COMMA &kp DOT     &kp FSLH &mt RSHIFT CLCK
-                       &kp LALT &kp LGUI &kp LCTRL &kp SPACE &mo LOWER        &mt RGUI ENTER      &kp SPACE      MO_TOG(2) &kp RGUI  &none
+&kp GRAVE      &kp N1  &kp N2      &kp N3   &kp N4    &kp N5                                         &kp N6         &kp N7    &kp N8    &kp N9      &kp N0   &kp BSPC
+&kp DEL        &kp Q   &kp W       &kp E    &kp R     &kp T                                          &kp Y          &kp U     &kp I     &kp O       &kp P    &kp TAB
+&kp ESC        &kp A   &mtt LALT S &kp D    &kp F     &kp G                                          &kp H          &kp J     &kp K     &mtt RALT L &kp SEMI &kp SQT
+&mt LSHFT CLCK &kp Z   &kp X       &kp C    &kp V     &kp B     &kp PSCRN        &kp C_MUTE          &kp N          &kp M     &kp COMMA &kp DOT     &kp FSLH &mt RSHIFT CLCK
+                       &kp LALT    &kp LGUI &kp LCTRL &kp SPACE &mo LOWER        &mt RGUI ENTER      &kp SPACE      MO_TOG(2) &kp RGUI  &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN>;
