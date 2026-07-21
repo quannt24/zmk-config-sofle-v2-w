@@ -90,11 +90,11 @@
 //                   |  ALT   |  LGUI  | LCTRL  | SP|GUI | LOWER  | | ENTER% | SP|GUI | !RAISE |  RGUI  |        |
 
             bindings = <
-&kp GRAVE      &kp N1  &kp N2      &kp N3      &kp N4    &kp N5                                               &kp N6         &kp N7    &kp N8           &kp N9        &kp N0   &kp BSPC
-&kp DEL        &kp Q   &kp W       &kp E       &kp R     &kp T                                                &kp Y          &kp U     &kp I            &kp O         &kp P    &kp TAB
-&kp ESC        &kp A   &kp S       &kp D       &kp F     &kp G                                                &kp H          &kp J     &kp K            &kp L         &kp SEMI &kp SQT
-&mt LSHFT CLCK &kp Z   &mtt LALT X &mtt CTRL C &kp V     &kp B           &kp PSCRN        &kp C_MUTE          &kp N          &kp M     &mtt RCTRL COMMA &mtt RALT DOT &kp FSLH &mt RSHIFT CLCK
-                       &kp LALT    &kp LGUI    &kp LCTRL &mtt SPACE LGUI &mo LOWER        &mt RGUI ENTER      &kp SPACE      MO_TOG(2) &kp RGUI  &none
+&kp GRAVE      &kp N1  &kp N2      &kp N3       &kp N4    &kp N5                                               &kp N6         &kp N7    &kp N8           &kp N9        &kp N0   &kp BSPC
+&kp DEL        &kp Q   &kp W       &kp E        &kp R     &kp T                                                &kp Y          &kp U     &kp I            &kp O         &kp P    &kp TAB
+&kp ESC        &kp A   &kp S       &kp D        &kp F     &kp G                                                &kp H          &kp J     &kp K            &kp L         &kp SEMI &kp SQT
+&mt LSHFT CLCK &kp Z   &mtt LALT X &mtt LCTRL C &kp V     &kp B           &kp PSCRN        &kp C_MUTE          &kp N          &kp M     &mtt RCTRL COMMA &mtt RALT DOT &kp FSLH &mt RSHIFT CLCK
+                       &kp LALT    &kp LGUI     &kp LCTRL &mtt SPACE LGUI &mo LOWER        &mt RGUI ENTER      &kp SPACE      MO_TOG(2) &kp RGUI  &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN>;
