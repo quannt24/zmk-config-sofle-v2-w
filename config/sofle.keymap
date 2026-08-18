@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+    
     macros {
         mod_1: mod_1 {
             compatible = "zmk,behavior-macro";
