@@ -146,7 +146,7 @@
         layer_2 {
             bindings = <
 &trans     &trans         &trans         &trans         &trans         &trans                       &trans    &trans    &trans    &trans     &trans    &trans
-&kp GRAVE  &kp DQT        &mt LC(N7) N7  &mt LC(N8) N8  &mt LC(N9) N9  &kp AT                       &kp AMPS  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp DEL
+&kp GRAVE  &kp DQT        &mt LC(N7) N7  &mt LC(N8) N8  &mt LC(N9) N9  &kp AT                       &kp AMPS  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp LS(DEL)
 &kp COMMA  &kp DOT        &mt LC(N4) N4  &mt LC(N5) N5  &mt LC(N6) N6  &kp EQUAL                    &kp PIPE  &kp LPAR  &kp RPAR  &kp ASTRK  &kp PLUS  &kp LS(F12)
 &kp BSLH   &mt LC(N0) N0  &mt LC(N1) N1  &mt LC(N2) N2  &mt LC(N3) N3  &kp EXCL   &trans    &trans  &kp F7    &kp F8    &kp F9    &kp F10    &kp F11   &kp F12
                           &trans         &trans         &trans         &trans     &trans    &trans  &trans    &trans    &trans    &trans
