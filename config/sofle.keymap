@@ -82,6 +82,12 @@
             bindings = <&kp RG(N0)>;
             label = "MOD_0";
         };
+
+        mic_mute: mic_mute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LSHFT &kp M>;
+        };
     };
 
     behaviors {
@@ -111,32 +117,40 @@
 
         layer_0 {
             bindings = <
-&trans           &trans  &trans       &trans        &trans     &trans                                &trans           &trans  &trans            &trans         &trans    &trans
-&kp TAB          &kp Q   &kp W        &kp E         &kp R      &kp T                                 &kp Y            &kp U   &kp I             &kp O          &kp P     &kp BACKSPACE
-&kp ESC          &kp A   &kp S        &kp D         &kp F      &kp G                                 &kp H            &kp J   &kp K             &kp L          &kp SEMI  &kp MINUS
-&mt LSHIFT CAPS  &kp Z   &mtt LALT X  &mtt LCTRL C  &kp V      &kp B            &trans    &trans     &kp N            &kp M   &mtt RCTRL COMMA  &mtt RALT DOT  &kp FSLH  &kp RSHFT
-                         &trans       &trans        &kp LCTRL  &mtt LGUI SPACE  &mo 1     &kp ENTER  &mtt RGUI SPACE  &mo 2   &trans            &trans
+&trans           &trans  &trans       &trans        &trans     &trans                                         &trans           &trans  &trans            &trans         &trans    &trans
+&kp TAB          &kp Q   &kp W        &kp E         &kp R      &kp T                                          &kp Y            &kp U   &kp I             &kp O          &kp P     &kp BACKSPACE
+&kp ESC          &kp A   &kp S        &kp D         &kp F      &kp G                                          &kp H            &kp J   &kp K             &kp L          &kp SEMI  &kp MINUS
+&mt LSHIFT CAPS  &kp Z   &mtt LALT X  &mtt LCTRL C  &kp V      &kp B            &kp PRINTSCREEN    &mic_mute  &kp N            &kp M   &mtt RCTRL COMMA  &mtt RALT DOT  &kp FSLH  &kp RSHFT
+                         &trans       &trans        &kp LCTRL  &mtt LGUI SPACE  &mo 1              &kp ENTER  &mtt RGUI SPACE  &mo 2   &trans            &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_BRI_INC C_BRI_DEC>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_1 {
             bindings = <
-&trans     &trans    &trans             &trans                &trans                 &trans                      &trans     &trans  &trans  &trans  &trans     &trans
-&kp GRAVE  &kp APOS  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                    &kp AT     &kp N7  &kp N8  &kp N9  &kp N0     &kp DEL
-&kp BSLH   &kp LBKT  &kp RBKT           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE                    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp DOT    &kp ASTRK
-&kp F1     &kp F2    &kp F3             &kp F4                &kp F5                 &kp F6    &trans    &trans  &kp EXCL   &kp N1  &kp N2  &kp N3  &kp COMMA  &kp AMPS
-                     &trans             &trans                &trans                 &trans    &trans    &trans  &trans     &trans  &trans  &trans
+&trans                          &trans    &trans  &trans  &trans  &trans                       &trans    &trans     &trans     &trans     &trans         &trans
+&mtt (LC(LS(GRAVE))) LC(GRAVE)  &kp SQT   &mod_7  &mod_8  &mod_9  &kp PRCNT                    &kp HOME  &kp PG_DN  &kp PG_DN  &kp END    &kp LC(PG_UP)  &kp DEL
+&kp TILDE                       &kp HASH  &mod_4  &mod_5  &mod_6  &kp CARET                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LC(PG_DN)  &trans
+&kp F7                          &mod_0    &mod_1  &mod_2  &mod_3  &kp DLLR   &trans    &trans  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5         &kp F6
+                                          &trans  &trans  &trans  &trans     &trans    &trans  &trans    &trans     &trans     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_2 {
             bindings = <
-&trans         &trans         &trans    &trans    &trans     &trans                           &trans     &trans  &trans  &trans  &trans  &trans
-&kp RC(GRAVE)  &kp RC(PG_UP)  &kp HOME  &kp UP    &kp END    &kp PAGE_UP                      &kp PRCNT  &mod_7  &mod_8  &mod_9  &mod_0  &trans
-&trans         &kp RC(PG_DN)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN                    &kp CARET  &mod_4  &mod_5  &mod_6  &trans  &trans
-&kp F7         &kp F8         &kp F9    &kp F10   &kp F11    &kp F12        &trans    &trans  &kp DLLR   &mod_1  &mod_2  &mod_3  &trans  &trans
-                              &trans    &trans    &trans     &trans         &trans    &trans  &trans     &trans  &trans  &trans
+&trans     &trans     &trans            &trans         &trans            &trans                       &trans    &trans    &trans    &trans     &trans    &trans
+&kp GRAVE  &kp DQT    &kp KP_N7         &kp KP_N8      &kp KP_N9         &kp AT                       &kp AMPS  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp DEL
+&kp COMMA  &kp DOT    &kp KP_N4         &kp KP_N5      &kp KP_N6         &kp EQUAL                    &kp PIPE  &kp LPAR  &kp RPAR  &kp ASTRK  &kp PLUS  &kp LS(F12)
+&kp BSLH   &kp KP_N0  &mt LC(KP_N1) N1  &mt LC(N2) N2  &mt LC(KP_N3) N3  &kp EXCL   &trans    &trans  &kp F7    &kp F8    &kp F9    &kp F10    &kp F11   &kp F12
+                      &trans            &trans         &trans            &trans     &trans    &trans  &trans    &trans    &trans    &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_3 {
@@ -147,6 +161,8 @@
 &trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                       &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(PG_DN) LC(PG_UP) &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
