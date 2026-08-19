@@ -132,7 +132,7 @@
         layer_1 {
             bindings = <
 &trans                          &trans    &trans  &trans  &trans  &trans                       &trans    &trans     &trans     &trans     &trans         &trans
-&mtt (LC(LS(GRAVE))) LC(GRAVE)  &kp SQT   &mod_7  &mod_8  &mod_9  &kp PRCNT                    &kp HOME  &kp PG_DN  &kp PG_DN  &kp END    &kp LC(PG_UP)  &kp DEL
+&mtt (LC(LS(GRAVE))) LC(GRAVE)  &kp SQT   &mod_7  &mod_8  &mod_9  &kp PRCNT                    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LC(PG_UP)  &kp DEL
 &kp TILDE                       &kp HASH  &mod_4  &mod_5  &mod_6  &kp CARET                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LC(PG_DN)  &trans
 &trans                          &mod_0    &mod_1  &mod_2  &mod_3  &kp DLLR   &trans    &trans  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5         &kp F6
                                           &trans  &trans  &trans  &trans     &trans    &trans  &trans    &trans     &trans     &trans
