@@ -145,11 +145,11 @@
 
         layer_2 {
             bindings = <
-&trans     &trans          &trans          &trans          &trans          &trans                       &trans    &trans    &trans    &trans      &trans     &trans
-&kp GRAVE  &mtt LC(N0) N0  &mtt LC(N1) N1  &mtt LC(N2) N2  &mtt LC(N3) N3  &kp PLUS                     &kp AMPS  &kp LBRC  &kp RBRC  &kp LBKT    &kp RBKT   &kp LS(DEL)
-&kp DQT    &kp SQT         &mtt LC(N4) N4  &mtt LC(N5) N5  &mtt LC(N6) N6  &kp EQUAL                    &kp PIPE  &kp LPAR  &kp RPAR  &kp PERIOD  &kp COMMA  &kp LS(F12)
-&kp BSLH   &kp AT          &mtt LC(N7) N7  &mtt LC(N8) N8  &mtt LC(N9) N9  &kp EXCL   &trans    &trans  &kp F7    &kp F8    &kp F9    &kp F10     &kp F11    &kp F12
-                           &trans          &trans          &trans          &trans     &trans    &trans  &trans    &trans    &trans    &trans
+&trans     &trans          &trans          &trans          &trans          &trans                       &trans        &trans    &trans    &trans      &trans     &trans
+&kp GRAVE  &mtt LC(N0) N0  &mtt LC(N1) N1  &mtt LC(N2) N2  &mtt LC(N3) N3  &kp PLUS                     &kp AMPS      &kp LBRC  &kp RBRC  &kp LBKT    &kp RBKT   &kp LS(DEL)
+&kp DQT    &kp SQT         &mtt LC(N4) N4  &mtt LC(N5) N5  &mtt LC(N6) N6  &kp EQUAL                    &kp PIPE      &kp LPAR  &kp RPAR  &kp PERIOD  &kp COMMA  &kp LS(F12)
+&kp BSLH   &kp AT          &mtt LC(N7) N7  &mtt LC(N8) N8  &mtt LC(N9) N9  &kp EXCL   &trans    &trans  &kp F7        &kp F8    &kp F9    &kp F10     &kp F11    &kp F12
+                           &trans          &trans          &trans          &trans     &trans    &trans  &kp RS(RGUI)  &trans    &trans    &trans
             >;
 
             sensor-bindings =
