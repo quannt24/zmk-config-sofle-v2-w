@@ -117,11 +117,11 @@
 
         layer_0 {
             bindings = <
-&trans      &trans  &trans       &trans        &trans     &trans                                         &trans           &trans  &trans            &trans         &trans    &trans
+&kp F1      &kp F2  &kp F3       &kp F4        &kp F5     &kp F6                                         &kp F7           &kp F8  &kp F9            &kp F10        &kp F11   &kp F12
 &kp TAB     &kp Q   &kp W        &kp E         &kp R      &kp T                                          &kp Y            &kp U   &kp I             &kp O          &kp P     &kp BACKSPACE
 &kp ESC     &kp A   &kp S        &kp D         &kp F      &kp G                                          &kp H            &kp J   &kp K             &kp L          &kp SEMI  &kp SQT
 &kp LSHIFT  &kp Z   &mtt LALT X  &mtt LCTRL C  &kp V      &kp B            &kp PRINTSCREEN    &mic_mute  &kp N            &kp M   &mtt RCTRL COMMA  &mtt RALT DOT  &kp FSLH  &mt RSHFT CAPS
-                    &trans       &trans        &kp LCTRL  &mtt LGUI SPACE  &mo 1              &kp ENTER  &mtt RGUI SPACE  &mo 2   &trans            &trans
+                    &kp LALT     &trans        &kp LCTRL  &mtt LGUI SPACE  &mo 1              &kp ENTER  &mtt RGUI SPACE  &mo 2   &trans            &kp RALT
             >;
 
             sensor-bindings =
@@ -132,9 +132,9 @@
         layer_1 {
             bindings = <
 &trans                          &trans     &trans  &trans  &trans  &trans                                   &trans    &trans     &trans     &trans     &trans         &trans
-&mtt (LC(LS(GRAVE))) LC(GRAVE)  &mod_0     &mod_1  &mod_2  &mod_3  &kp PRCNT                                &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LC(PG_UP)  &kp DEL
-&kp TILDE                       &kp HASH   &mod_4  &mod_5  &mod_6  &kp CARET                                &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LC(PG_DN)  &trans
-&trans                          &kp ASTRK  &mod_7  &mod_8  &mod_9  &kp DLLR   &trans    &trans              &kp F1    &kp F2     &kp F3     &kp F4     &kp F5         &kp F6
+&mtt (LC(LS(GRAVE))) LC(GRAVE)  &kp TILDE  &mod_1  &mod_2  &mod_3  &kp CARET                                &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &kp DEL
+&kp HASH                        &mod_0     &mod_4  &mod_5  &mod_6  &kp DLLR                                 &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LC(PG_DN)  &kp LC(PG_UP)
+&trans                          &kp ASTRK  &mod_7  &mod_8  &mod_9  &kp PRCNT  &trans    &trans              &kp F1    &kp F2     &kp F3     &kp F4     &kp F5         &kp F6
                                            &trans  &trans  &trans  &trans     &trans    &kp K_CONTEXT_MENU  &trans    &trans     &trans     &trans
             >;
 
@@ -146,8 +146,8 @@
         layer_2 {
             bindings = <
 &trans                &trans          &trans          &trans          &trans          &trans                       &trans             &trans    &trans    &trans      &trans     &trans
-&kp GRAVE             &mtt LC(N0) N0  &mtt LC(N1) N1  &mtt LC(N2) N2  &mtt LC(N3) N3  &kp PLUS                     &kp UNDER          &kp LBRC  &kp RBRC  &kp LBKT    &kp RBKT   &kp LS(DEL)
-&kp AMPS              &kp PIPE        &mtt LC(N4) N4  &mtt LC(N5) N5  &mtt LC(N6) N6  &kp EQUAL                    &kp MINUS          &kp LPAR  &kp RPAR  &kp PERIOD  &kp COMMA  &kp LS(F12)
+&kp GRAVE             &kp AMPS        &mtt LC(N1) N1  &mtt LC(N2) N2  &mtt LC(N3) N3  &kp PLUS                     &kp UNDER          &kp LBRC  &kp RBRC  &kp LBKT    &kp RBKT   &kp LS(DEL)
+&kp PIPE              &mtt LC(N0) N0  &mtt LC(N4) N4  &mtt LC(N5) N5  &mtt LC(N6) N6  &kp EQUAL                    &kp MINUS          &kp LPAR  &kp RPAR  &kp PERIOD  &kp COMMA  &kp LS(F12)
 &mtt LEFT_SHIFT BSLH  &kp AT          &mtt LC(N7) N7  &mtt LC(N8) N8  &mtt LC(N9) N9  &kp EXCL   &trans    &trans  &kp F7             &kp F8    &kp F9    &kp F10     &kp F11    &kp F12
                                       &trans          &trans          &trans          &trans     &trans    &trans  &kp RS(RIGHT_GUI)  &trans    &trans    &trans
             >;
